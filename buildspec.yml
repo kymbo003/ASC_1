@@ -49,13 +49,12 @@ phases:
       
  pre_build:
     commands:
-      - composer install
+      - composer install --no-progress --no-suggest
        
  build:
    commands:
      - echo Build started on `date`
      - echo Installing composer deps
-     - composer install --no-progress --no-suggest
      - phpunit tests
      
  post_build:
