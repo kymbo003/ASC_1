@@ -52,9 +52,9 @@ phases:
      - echo Installing composer deps
      - composer install --no-progress --no-suggest
      - composer install --no-interaction --prefer-dist \
-    && ./vendor/bin/parallel-lint src tests \
-    && ./vendor/bin/phpunit --verbose --no-coverage \
-    && ./vendor/bin/phpcs src tests --standard=psr2 -sp
+     - && ./vendor/bin/parallel-lint src tests \
+     - && ./vendor/bin/phpunit --verbose --no-coverage \
+     - && ./vendor/bin/phpcs src tests --standard=psr2 -sp
     
  post_build:
    commands:
